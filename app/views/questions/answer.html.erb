@@ -1,0 +1,7 @@
+<% if params[:question.to_s] == "I am going to work"%>
+<p><%= @answer[0]%></p>
+<% elsif params[:question].to_s.end_with?("?")%>
+<p><%= @answer[1]%></p>
+<% else %>
+<p><%= @answer[2]%></p>
+<% end%>
