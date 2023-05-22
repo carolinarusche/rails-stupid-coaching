@@ -1,7 +1,15 @@
-<% if params[:question.to_s] == "I am going to work"%>
-<p><%= @answer[0]%></p>
-<% elsif params[:question].to_s.end_with?("?")%>
-<p><%= @answer[1]%></p>
-<% else %>
-<p><%= @answer[2]%></p>
-<% end%>
+<div class="m-3">
+  <p><%= @question[0] %></p>
+  <p><em>- You</em></p>
+
+  <div class="mt-5">
+    <% if params[:question.to_s] == "I am going to work"%>
+    <p><%= @answer[0]%></p>
+    <% elsif params[:question].to_s.end_with?("?")%>
+    <p><%= @answer[1]%></p>
+    <% else %>
+    <p><%= @answer[2]%></p>
+    <% end%>
+    <p><em>- Your coach</em></p>
+  </div>
+</div>
